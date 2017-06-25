@@ -26,6 +26,13 @@
             <artifactId>spring-boot-starter-web</artifactId>  
             <!-- 不需要version 会根据parent版本进行添加上-->
         </dependency> 
+        
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+        
         <!-- 添加fastjson  支持 -->
          <dependency>  
             <groupId>com.alibaba</groupId>  
@@ -56,6 +63,7 @@
         <dependency>
         	<groupId>mysql</groupId>
         	<artifactId>mysql-connector-java</artifactId>
+        	<version>5.1.21</version>
         </dependency>
         
         <!-- 不要使用1.00因为还不支持拦截器  使用最新版本即可 -->
