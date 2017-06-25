@@ -1,0 +1,32 @@
+spring:
+#      使用thymeleaf模板
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+#    设置缓存为false 为了热部署 host refresh
+    cache: false
+#    设置freemarker
+  freemarker:
+    allow-request-override: false
+#    开发过程建议关闭缓存
+#    cache: true
+    cache: false
+    check-template-location: false
+    charset: UTF-8
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+#    prefix: xx
+    request-context-attribute: 
+#    settings: 
+# 默认后缀就是.ftl
+#    suffix: .ftl
+#    template-loader-path: classPath:/templates/
+#    view-names:
+
+server:
+  port: 8080

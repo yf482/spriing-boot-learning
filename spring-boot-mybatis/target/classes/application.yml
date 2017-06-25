@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver 
+    max-active: 20
+    max-idle: 5
+    min-idle: 1
+    initial-size: 2
+#    spring jpa配置信息
+#  jpa:
+#    database: MYSQL
+#    show-sql: true
+#    hibernate:
+##    create ,create-drop,update
+#      ddl-auto: update
+#      naming:
+#        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+#    properties: 
+#      hibernate-dialect: org.hibernate.dialect.MYSQL5Dialect
+
+
+
+#      使用thymeleaf模板
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html; charset=utf-8
+#    设置缓存为false 为了热部署 host refresh
+    cache: false
+#    设置freemarker
+  freemarker:
+    allow-request-override: false
+#    开发过程建议关闭缓存
+    cache: true
+    check-template-location: false
+    charset: UTF-8
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+#    prefix: xx
+    request-context-attribute: 
+#    settings: 
+# 默认后缀就是.ftl
+#    suffix: .ftl
+#    template-loader-path: classPath:/templates/
+#    view-names:
+
+server:
+  port: 8800
