@@ -25,6 +25,4 @@ public class DemoService {
 		 demoMapper.save(demo);
 	}
 
-
-
 }

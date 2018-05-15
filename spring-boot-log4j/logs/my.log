@@ -1,0 +1,12 @@
+2017-07-12 22:35:34,590  INFO ApplicationTests:48 ---- Starting ApplicationTests on PC-20161127XJDY with PID 7604 (E:\github\spring-boot-learning\spring-boot-log4j\target\test-classes started by Administrator in E:\github\spring-boot-learning\spring-boot-log4j)
+2017-07-12 22:35:34,591 DEBUG ApplicationTests:51 ---- Running with Spring Boot v1.3.2.RELEASE, Spring v4.2.4.RELEASE
+2017-07-12 22:35:34,591  INFO ApplicationTests:666 ---- No active profile set, falling back to default profiles: default
+2017-07-12 22:35:35,115  INFO ApplicationTests:57 ---- Started ApplicationTests in 0.716 seconds (JVM running for 1.538)
+2017-07-12 22:35:35,121  INFO ApplicationTests:18 ---- 输出info
+2017-07-12 22:35:35,122 DEBUG ApplicationTests:19 ---- 输出debug
+2017-07-12 22:35:35,122 ERROR ApplicationTests:20 ---- 输出error
+2017-07-12 22:40:12,558  INFO ApplicationTests:48 ---- Starting ApplicationTests on PC-20161127XJDY with PID 10224 (E:\github\spring-boot-learning\spring-boot-log4j\target\test-classes started by Administrator in E:\github\spring-boot-learning\spring-boot-log4j)
+2017-07-12 22:40:12,558  INFO ApplicationTests:670 ---- The following profiles are active: dev
+2017-07-12 22:40:13,053  INFO ApplicationTests:57 ---- Started ApplicationTests in 0.687 seconds (JVM running for 1.137)
+2017-07-12 22:40:13,059  INFO ApplicationTests:18 ---- 输出info
+2017-07-12 22:40:13,060 ERROR ApplicationTests:20 ---- 输出error

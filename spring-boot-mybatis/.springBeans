@@ -7,7 +7,6 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.yf.springboot.test.HelloController</config>
 	</configs>
 	<autoconfigs>
 		<config>java:com.yf.springboot.Application</config>
