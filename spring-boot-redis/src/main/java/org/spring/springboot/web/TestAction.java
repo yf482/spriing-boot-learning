@@ -8,8 +8,9 @@ import org.spring.springboot.service.CityService;
 import org.spring.springboot.service.RedisService;
 import org.spring.springboot.service.impl.CityServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,7 +34,7 @@ public class TestAction {
     private RedisService redisService;
 
     @Autowired
-    private RedisTemplate<String,Object> redisTemplate;
+    private StringRedisTemplate stringRedisTemplate;
 
     private City getShanghai(){
         return new City(1L, 10L, "上海", "人称魔都的地方");
@@ -82,10 +83,28 @@ public class TestAction {
      */
     @RequestMapping("/getKey")
     public String getKey(String key){
-        ValueOperations<String, Object> valueOperations = redisTemplate.opsForValue();
-        if(redisTemplate.hasKey(key)){
+        ValueOperations<String, String> valueOperations = stringRedisTemplate.opsForValue();
+        if(stringRedisTemplate.hasKey(key)){
             String val = (String) valueOperations.get(key);
             System.out.println("val = " + val);
+        }
+        return "success";
+    }
+
+
+    /**
+     *
+     * @return
+     */
+    @RequestMapping("/setKey")
+    public String setKey(String key,String value){
+        ValueOperations<String, String> valueOperations = stringRedisTemplate.opsForValue();
+        if(stringRedisTemplate.hasKey(key)){
+            String val = (String) valueOperations.get(key);
+            System.out.println("val = " + val);
+        }else{
+            RedisSerializer<String> redisSerializer = stringRedisTemplate.getStringSerializer();
+            stringRedisTemplate.setKeySerializer(redisSerializer);
         }
         return "success";
     }

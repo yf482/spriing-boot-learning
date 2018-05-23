@@ -21,8 +21,6 @@ import java.util.Set;
 @Service
 public class RedisService {
 
-        @Autowired
-        private RedisTemplate<String, Object> redisTemplate;
 
         private Set<User> users = new HashSet<User>();
 
